@@ -49,6 +49,9 @@
   &__content {
     ul {
       margin-left: 2rem;
+      li::marker {
+        font-size: 2rem;
+      }
       li {
         font-size: 18px;
         font-family: "Open Sans", sans-serif;

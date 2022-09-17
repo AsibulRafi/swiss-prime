@@ -1,0 +1,141 @@
+.careers {
+  background-color: #262626;
+  &__wrapper {
+    padding: 10rem 15rem;
+    @media screen and (max-width: 1600px) {
+      padding: 10rem 4rem;
+    }
+    @include breakpoint-down(medium) {
+      padding: 8rem 3rem;
+    }
+    @include breakpoint-down(small) {
+      padding: 8rem 2rem;
+    }
+  }
+  &__heading {
+    text-align: center;
+    margin-bottom: 10rem;
+    font-size: 50px;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 400;
+    color: #fff;
+    @include breakpoint-down(medium) {
+      font-size: 40px;
+    }
+    @include breakpoint-down(small) {
+      font-size: 36px;
+    }
+  }
+  &__content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    @include breakpoint-down(medium) {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    &-info {
+      margin-right: 10rem;
+      flex-basis: 45%;
+      @media screen and (max-width: 1300px) {
+        margin-right: 5rem;
+      }
+      @include breakpoint-down(medium) {
+        margin-right: 0rem;
+        margin-bottom: 5rem;
+      }
+      p {
+        font-size: 16px;
+        font-weight: 400;
+        margin-bottom: 2rem;
+        line-height: 30px;
+        color: #fff;
+        @include breakpoint-down(small) {
+          font-size: 14px;
+        }
+      }
+    }
+    &-img {
+      flex-basis: 50%;
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
+.posts {
+  background-color: #262626;
+  padding: 5rem 15rem;
+  @media screen and (max-width: 1600px) {
+    padding: 5rem 4rem;
+  }
+  @include breakpoint-down(medium) {
+    padding: 5rem 3rem;
+  }
+  @include breakpoint-down(small) {
+    padding: 5rem 2rem;
+  }
+  &__single {
+    margin-bottom: 10rem;
+    h2 {
+      font-family: "Ubuntu", sans-serif;
+      font-size: 30px;
+      font-weight: 400;
+      color: #fff;
+      margin-bottom: 5rem;
+      @include breakpoint-down(medium) {
+        font-size: 26px;
+      }
+      @include breakpoint-down(small) {
+        font-size: 22px;
+      }
+    }
+    h4 {
+      font-size: 22px;
+      font-weight: 400;
+      margin-bottom: 2rem;
+      color: #fff;
+      @include breakpoint-down(small) {
+        font-size: 18px;
+      }
+    }
+    p {
+      font-size: 16px;
+      font-family: "Open Sans", sans-serif;
+      margin-bottom: 2rem;
+      color: #fff;
+      line-height: 30px;
+      width: 900px;
+      @include breakpoint-down(medium) {
+        font-size: 15px;
+        width: 100%;
+      }
+      @include breakpoint-down(small) {
+        line-height: 25px;
+        font-size: 14px;
+      }
+    }
+    ul {
+      margin-left: 5rem;
+      margin-bottom: 5rem;
+      @include breakpoint-down(small) {
+        margin-left: 2rem;
+      }
+      li::marker {
+        font-size: 2rem;
+      }
+      li {
+        font-size: 18px;
+        font-family: "Open Sans", sans-serif;
+        margin-bottom: 1rem;
+        color: #fff;
+        line-height: 25px;
+        @include breakpoint-down(small) {
+          font-size: 15px;
+        }
+      }
+    }
+  }
+}

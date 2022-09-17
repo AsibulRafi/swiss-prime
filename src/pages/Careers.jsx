@@ -9,12 +9,12 @@ export default function Careers() {
           <div className="careers__content">
             <div className="careers__content-info">
               <p>
-                Here At Waysfx we ensure our client get the ideal environment
-                and conditions that you need to improve in your area of
-                expertise, whether you are a young individual at the beginning
-                of your career, or an experienced professional seeking to move
-                forward. What we plan to achieve is to help you attain your
-                professional aspirations by giving you the motivation and
+                Here At Swiss Prime we ensure our client get the ideal
+                environment and conditions that you need to improve in your area
+                of expertise, whether you are a young individual at the
+                beginning of your career, or an experienced professional seeking
+                to move forward. What we plan to achieve is to help you attain
+                your professional aspirations by giving you the motivation and
                 inspiration to do so.{" "}
               </p>
               <p>
@@ -107,7 +107,7 @@ export default function Careers() {
           <p>
             The Customer Service Representative is expected to provide
             professional and excellent customer service to clients whilst
-            enhancing their trading experience with Waysfx.
+            enhancing their trading experience with Swiss Prime.
           </p>
           <div className="posts__single-list">
             <h4>Requirements</h4>
