@@ -1,0 +1,120 @@
+.spreads {
+  &__content {
+    background-color: #05122b;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    @include breakpoint-down(medium) {
+      flex-direction: column;
+    }
+    padding: 8rem 20rem;
+    @media screen and (max-width: 1600px) {
+      padding: 8rem 5rem;
+    }
+    @include breakpoint-down(medium) {
+      padding: 8rem 4rem;
+    }
+    @include breakpoint-down(small) {
+      padding: 5rem 2rem;
+    }
+    &-text {
+      flex-basis: 50%;
+      margin-right: 10rem;
+      @include breakpoint-down(medium) {
+        margin-right: 0rem;
+        margin-bottom: 5rem;
+      }
+      p {
+        font-size: 18px;
+        line-height: 25px;
+        color: #e0e0e0;
+        margin-bottom: 5rem;
+        width: 460px;
+        @include breakpoint-down(small) {
+          width: 100%;
+          font-size: 16px;
+        }
+      }
+      h2 {
+        font-family: "Lato", sans-serif;
+        font-size: 28px;
+        color: #f2f2f2;
+        margin-bottom: 2rem;
+        @include breakpoint-down(small) {
+          font-size: 24px;
+        }
+      }
+      ul {
+        margin-left: 2rem;
+        li {
+          font-size: 18px;
+          color: #e0e0e0;
+          margin-bottom: 1rem;
+        }
+      }
+    }
+    &-img {
+      flex-basis: 50%;
+      @include breakpoint-down(small) {
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+  &-table {
+    padding: 10rem 20rem;
+    @media screen and (max-width: 1600px) {
+      padding: 10rem 5rem;
+    }
+    @include breakpoint-down(medium) {
+      padding: 8rem 4rem;
+    }
+    @include breakpoint-down(small) {
+      padding: 5rem 2rem;
+    }
+    &-content {
+      overflow-x: auto;
+      table {
+        text-align: center;
+        border: none;
+        border-spacing: 0px;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+        height: 100%;
+        th {
+          font-size: 1.6rem;
+          font-family: "Lato", sans-serif;
+          font-weight: 500;
+          padding: 2rem;
+          border: none;
+          color: #fff;
+          background-color: #0c1d40;
+        }
+        td {
+          font-size: 1.4rem;
+          background-color: #f3f3f3;
+          padding: 2rem 1rem;
+          color: #000;
+        }
+      }
+    }
+    .sperds__heading {
+      margin-block: 5rem;
+      font-family: "PT Serif", sans-serif;
+      font-size: 40px;
+      line-height: 50px;
+      color: #0c1d40;
+      @include breakpoint-down(medium) {
+        font-size: 36px;
+      }
+      @include breakpoint-down(small) {
+        font-size: 28px;
+        line-height: 40px;
+      }
+    }
+  }
+}

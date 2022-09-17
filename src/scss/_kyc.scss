@@ -1,0 +1,78 @@
+.kyc {
+  padding: 8rem 30rem;
+  @media screen and (max-width: 1700px) {
+    padding: 8rem 5rem;
+  }
+  @include breakpoint-down(medium) {
+    padding: 8rem 4rem;
+  }
+  @include breakpoint-down(small) {
+    padding: 5rem 2rem;
+  }
+  p {
+    font-size: 18px;
+    font-family: "Lato", sans-serif;
+    margin-bottom: 2rem;
+    color: #0c1d40;
+    line-height: 25px;
+    @include breakpoint-down(small) {
+      font-size: 15px;
+    }
+  }
+  h2 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: #1c3059;
+    line-height: 50px;
+    margin-bottom: 3rem;
+    @include breakpoint-down(medium) {
+      font-size: 3rem;
+      line-height: 45px;
+    }
+    @include breakpoint-down(small) {
+      font-size: 2.5rem;
+      line-height: 40px;
+    }
+  }
+  ul {
+    margin-left: 3rem;
+
+    li {
+      font-size: 18px;
+      font-family: "Lato", sans-serif;
+      margin-bottom: 1rem;
+      color: #0c1d40;
+      line-height: 25px;
+      &::marker {
+        font-size: 2rem;
+      }
+      @include breakpoint-down(small) {
+        font-size: 15px;
+      }
+    }
+  }
+  hr {
+    margin-block: 5rem;
+    border: none;
+    border-top: 3px dashed #c4c4c4;
+  }
+  &__flex {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    margin-block: 2rem;
+    @include breakpoint-down(medium) {
+      flex-direction: column;
+    }
+    &-content {
+      flex-basis: 50%;
+      &:first-child {
+        margin-right: 5rem;
+        @include breakpoint-down(medium) {
+          margin-right: 0rem;
+          margin-bottom: 5rem;
+        }
+      }
+    }
+  }
+}

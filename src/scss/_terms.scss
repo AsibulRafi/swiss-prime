@@ -1,0 +1,168 @@
+.docs {
+  padding: 10rem 15rem;
+  @media screen and (max-width: 1600px) {
+    padding: 10rem 5rem;
+  }
+  @include breakpoint-down(medium) {
+    padding: 8rem 4rem;
+  }
+  @include breakpoint-down(small) {
+    padding: 5rem 2rem;
+  }
+  &__heading {
+    margin-bottom: 10rem;
+    h2 {
+      text-align: center;
+      margin-bottom: 4rem;
+      font-size: 50px;
+      font-family: "Ubuntu", sans-serif;
+      font-weight: 400;
+      color: #406c83;
+      @include breakpoint-down(medium) {
+        font-size: 40px;
+      }
+      @include breakpoint-down(small) {
+        font-size: 36px;
+      }
+    }
+    p {
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+      text-align: center;
+      font-size: 16px;
+      font-family: "Open Sans", sans-serif;
+      margin-bottom: 2rem;
+      color: #212121;
+      line-height: 30px;
+      width: 900px;
+      @include breakpoint-down(medium) {
+        width: 100%;
+        font-size: 15px;
+      }
+      @include breakpoint-down(small) {
+        line-height: 25px;
+        font-size: 14px;
+      }
+    }
+  }
+  &__content {
+    ul {
+      margin-left: 2rem;
+      li {
+        font-size: 18px;
+        font-family: "Open Sans", sans-serif;
+        margin-bottom: 1rem;
+        color: #0c1d40;
+        line-height: 25px;
+
+        @include breakpoint-down(small) {
+          font-size: 15px;
+        }
+      }
+    }
+    hr {
+      margin-block: 5rem;
+      border: 1px solid #406c83;
+    }
+    table {
+      width: 100%;
+      margin-block: 3rem;
+      text-align: center;
+      border-spacing: 0px;
+      thead {
+        background: #406c83;
+        border: none;
+        border: 1px solid #406c83;
+      }
+      th {
+        font-size: 1.6rem;
+        font-family: "Ubuntu", sans-serif;
+        font-weight: 500;
+        padding: 2rem;
+        color: #fff;
+        background-color: #406c83;
+      }
+      td {
+        font-size: 1.4rem;
+        padding: 2rem 1rem;
+        color: #000;
+        border: 1px solid #406c83;
+      }
+    }
+    p {
+      font-size: 16px;
+      font-family: "Open Sans", sans-serif;
+      margin-bottom: 2rem;
+      color: #212121;
+      line-height: 30px;
+      @include breakpoint-down(medium) {
+        font-size: 15px;
+      }
+      @include breakpoint-down(small) {
+        line-height: 25px;
+        font-size: 14px;
+      }
+    }
+    h2 {
+      font-family: "Ubuntu", sans-serif;
+      font-size: 30px;
+      font-weight: 400;
+      color: #282f4b;
+      margin-bottom: 2rem;
+      @include breakpoint-down(medium) {
+        font-size: 26px;
+      }
+      @include breakpoint-down(small) {
+        font-size: 22px;
+      }
+    }
+    &-flex {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start;
+      @include breakpoint-down(medium) {
+        flex-direction: column;
+      }
+      &-box {
+        flex-basis: 50%;
+        &:first-child {
+          margin-right: 10rem;
+          @include breakpoint-down(medium) {
+            margin-right: 0rem;
+            margin-bottom: 2rem;
+          }
+        }
+      }
+    }
+    h4 {
+      font-weight: 600;
+      font-size: 16px;
+      color: #000;
+      margin-bottom: 1rem;
+    }
+    img {
+      width: 100%;
+      margin-block: 5rem;
+    }
+  }
+
+  &__flex {
+    display: flex;
+    flex-direction: row;
+    @include breakpoint-down(medium) {
+      flex-direction: column;
+    }
+    &-content {
+      flex-basis: 50%;
+      &:first-child {
+        margin-right: 10rem;
+        @include breakpoint-down(medium) {
+          margin-right: 0rem;
+          margin-bottom: 4rem;
+        }
+      }
+    }
+  }
+}

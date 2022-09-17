@@ -1,0 +1,634 @@
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-image: url("../assets/homeBg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: #000;
+    opacity: 0.4;
+  }
+  &__wrapper {
+    position: relative;
+    z-index: 99;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    padding: 40rem 20rem 10rem;
+
+    @media screen and (max-width: 1600px) {
+      padding: 35rem 5rem 10rem;
+    }
+    @include breakpoint-down(medium) {
+      padding: 25rem 4rem;
+      justify-content: center;
+      align-items: center;
+    }
+    @include breakpoint-down(small) {
+      padding: 20rem 2rem;
+    }
+  }
+  &__content {
+    position: relative;
+    z-index: 10;
+
+    height: 100%;
+    @include breakpoint-down(medium) {
+      width: 100%;
+      height: 100%;
+      text-align: center;
+    }
+    @include breakpoint-down(small) {
+      padding: 4rem;
+    }
+    &-heading {
+      font-family: "Ubuntu", sans-serif;
+      font-weight: 400;
+      font-size: 50px;
+      line-height: 65px;
+      letter-spacing: 0.02em;
+      color: #ffffff;
+      margin-bottom: 2rem;
+      @include breakpoint-down(medium) {
+        br {
+          display: none;
+        }
+        font-size: 4.5rem;
+      }
+      @include breakpoint-down(small) {
+        font-size: 35px;
+        line-height: 40px;
+      }
+    }
+    p {
+      font-size: 16px;
+      color: #dadada;
+      line-height: 30px;
+      letter-spacing: 0.03em;
+      margin-bottom: 3rem;
+      @include breakpoint-down(small) {
+        font-size: 15px;
+      }
+    }
+    &-btn {
+      background: #406c83;
+      border: 3px solid #406c83;
+      padding: 2rem 6rem;
+      font-size: 20px;
+      font-weight: 500;
+      text-transform: uppercase;
+      font-family: "Open Sans", sans-serif;
+      transition: all 0.3s ease-in-out;
+      color: #fff;
+      &:hover {
+        background: transparent;
+        color: #fff;
+      }
+      @include breakpoint-down(small) {
+        padding: 1rem 3rem;
+        font-size: 18px;
+      }
+    }
+  }
+}
+.info {
+  background-color: #262626;
+  position: relative;
+  height: 100%;
+  width: 100%;
+
+  &__wrapper {
+    padding: 10rem 15rem;
+    @media screen and (max-width: 1800px) {
+      padding: 10rem 5rem 0rem;
+    }
+    @include breakpoint-down(medium) {
+      padding: 10rem 4rem 0rem;
+    }
+    @include breakpoint-down(small) {
+      padding: 8rem 2rem 0rem;
+    }
+  }
+  @include breakpoint-down(medium) {
+    br {
+      display: none;
+    }
+  }
+  &__heading {
+    position: relative;
+    text-align: center;
+    h2 {
+      font-family: "Ubuntu", sans-serif;
+      font-weight: 400;
+      font-size: 4.8rem;
+      letter-spacing: 0.05em;
+      color: #fff;
+      z-index: 1;
+      margin-bottom: 15rem;
+      text-decoration: underline;
+      @include breakpoint-down(medium) {
+        font-size: 3.5rem;
+      }
+      @include breakpoint-down(small) {
+        margin-bottom: 10rem;
+        font-size: 3rem;
+      }
+    }
+  }
+  &__content {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 8rem;
+    justify-items: center;
+    align-self: center;
+    @include breakpoint-down(medium) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+    .info__card {
+      margin-bottom: 5rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      &:not(:nth-child(2)) {
+        margin-right: 8rem;
+      }
+      &:not(:nth-child(4)) {
+        margin-right: 8rem;
+      }
+      @include breakpoint-down(medium) {
+        margin-bottom: 4rem;
+        &:not(:nth-child(2)) {
+          margin-right: 0rem;
+        }
+        &:not(:nth-child(4)) {
+          margin-right: 0rem;
+        }
+      }
+      @include breakpoint-down(small) {
+        margin-bottom: 4rem;
+      }
+      img {
+        margin-bottom: 5rem;
+        @include breakpoint-down(medium) {
+          width: 15%;
+        }
+        @include breakpoint-down(small) {
+          width: 25%;
+        }
+      }
+      h2 {
+        font-size: 2.4rem;
+        color: #fff;
+        z-index: 1;
+        padding-right: 2rem;
+        margin-bottom: 2rem;
+        line-height: 35px;
+        text-align: center;
+        @include breakpoint-down(small) {
+          font-size: 2rem;
+        }
+      }
+      p {
+        color: #fff;
+        font-size: 1.6rem;
+        z-index: 1;
+        line-height: 30px;
+        text-align: center;
+        @include breakpoint-down(small) {
+          font-size: 1.4rem;
+        }
+      }
+    }
+  }
+}
+
+.slider {
+  margin: 0rem auto;
+  position: relative;
+  .rec.rec-arrow {
+    display: none;
+  }
+  .rec.rec-pagination {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .rec {
+    z-index: 100;
+  }
+  .rec .rec-slider-container {
+    margin: 0 0px;
+  }
+  .rec .rec-dot_active {
+    background-color: #fff;
+    box-shadow: 0 0 1px 3px rgba(229, 230, 231, 0.3);
+  }
+  .rec .rec-dot {
+    z-index: 100;
+    box-shadow: 0 0 1px 2px rgba(255, 255, 255, 0.3);
+  }
+
+  &__single {
+    width: 100%;
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    &-wrapper {
+      position: relative;
+      z-index: 10;
+      padding: 5rem;
+      height: 536px;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      @include breakpoint-down(medium) {
+        padding: 20rem 4rem;
+      }
+      @include breakpoint-down(small) {
+        padding: 10rem 2rem;
+        width: 100%;
+      }
+    }
+    &-content {
+      position: relative;
+      padding: 5rem 3rem;
+      text-align: center;
+      width: 634px;
+      &::before {
+        content: "";
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background-color: #d9d9d9;
+        opacity: 0.7;
+      }
+      br {
+        @include breakpoint-down(medium) {
+          display: none;
+        }
+      }
+      h2 {
+        position: relative;
+        z-index: 100;
+        font-family: "Ubuntu", sans-serif;
+        font-size: 3.2rem;
+        text-transform: uppercase;
+        line-height: 50px;
+        letter-spacing: 0.05em;
+        color: #262626;
+        font-weight: 400;
+        margin-bottom: 2rem;
+        @include breakpoint-down(medium) {
+          font-size: 3rem;
+        }
+        @include breakpoint-down(small) {
+          font-size: 2rem;
+        }
+      }
+      p {
+        position: relative;
+        z-index: 10;
+        font-size: 16px;
+        font-weight: 400;
+        color: #262626;
+        margin-bottom: 2rem;
+        @include breakpoint-down(small) {
+          font-size: 14px;
+        }
+      }
+      a {
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 10;
+        display: block;
+        background: #406c83;
+        border: 3px solid #406c83;
+        padding: 1rem 4rem;
+        font-size: 18px;
+        font-weight: 400;
+        text-transform: uppercase;
+        margin-bottom: 1rem;
+        font-family: "Open Sans", sans-serif;
+        transition: all 0.3s ease-in-out;
+        color: #fff;
+        width: 300px;
+        &:hover {
+          background: transparent;
+          color: #000;
+        }
+        @include breakpoint-down(small) {
+          padding: 1rem 2rem;
+          font-size: 16px;
+        }
+      }
+      h4 {
+        position: relative;
+        z-index: 10;
+        font-family: "Open Sans", sans-serif;
+        font-size: 12px;
+        font-weight: 400;
+      }
+      img {
+        position: relative;
+        z-index: 100;
+        margin-bottom: 5rem;
+        width: 50%;
+      }
+    }
+  }
+}
+
+.trade__info {
+  background-color: #262626;
+  &__wrapper {
+    padding: 10rem 0rem;
+    @media screen and (max-width: 1800px) {
+      padding: 10rem 0rem;
+    }
+    @include breakpoint-down(medium) {
+      padding: 10rem 3rem;
+    }
+    @include breakpoint-down(small) {
+      padding: 1rem;
+    }
+  }
+
+  &-content {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: row;
+    @include breakpoint-down(medium) {
+      flex-direction: column;
+      br {
+        display: none;
+      }
+    }
+    &-info {
+      flex-basis: 45%;
+      margin-inline: 10rem;
+      @include breakpoint-down(medium) {
+        margin-inline: 0rem;
+        text-align: center;
+      }
+      h2 {
+        font-family: "Ubuntu", sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 32px;
+        line-height: auto;
+        margin-bottom: 3rem;
+        letter-spacing: 0.05em;
+        color: #fff;
+        @include breakpoint-down(medium) {
+          font-size: 3rem;
+        }
+        @include breakpoint-down(small) {
+          font-size: 2.8rem;
+        }
+      }
+      p {
+        font-size: 16px;
+        line-height: 30px;
+        color: #fff;
+        margin-bottom: 2rem;
+        @include breakpoint-down(small) {
+          font-size: 14px;
+          line-height: 26px;
+        }
+        @media screen and (max-width: 1800px) {
+          br {
+            display: none;
+          }
+        }
+      }
+    }
+    &-img {
+      flex-basis: 50%;
+      @include breakpoint-down(medium) {
+        margin-block: 5rem;
+      }
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
+// Trade
+.trade {
+  position: relative;
+  background-image: url("../assets/stockmarket.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #262626;
+    opacity: 0.6;
+  }
+
+  &__wrapper {
+    padding: 10rem 35rem;
+    @media screen and (max-width: 1800px) {
+      padding: 10rem 5rem;
+    }
+    @include breakpoint-down(medium) {
+      padding: 10rem 4rem;
+    }
+    @include breakpoint-down(small) {
+      padding: 10rem 2rem;
+    }
+  }
+  &__heading {
+    position: relative;
+    margin-bottom: 10rem;
+    h2 {
+      font-family: "Ubuntu", sans-serif;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 40px;
+      line-height: auto;
+      margin-bottom: 3rem;
+      letter-spacing: 0.05em;
+      color: #fff;
+      @include breakpoint-down(medium) {
+        font-size: 3.5rem;
+      }
+      @include breakpoint-down(small) {
+        font-size: 3rem;
+      }
+    }
+    p {
+      color: #fff;
+      width: 650px;
+      z-index: 1;
+      font-size: 1.6rem;
+      line-height: 30px;
+      @include breakpoint-down(medium) {
+        text-align: center;
+        width: 100%;
+      }
+    }
+  }
+  &__content {
+    position: relative;
+
+    h2 {
+      font-size: 2.5rem;
+      font-family: "Ubuntu";
+      font-weight: 600;
+      z-index: 1;
+      color: #fff;
+      margin-block: 5rem;
+      @include breakpoint-down(medium) {
+        text-align: center;
+      }
+      @include breakpoint-down(small) {
+        font-size: 2rem;
+      }
+    }
+    .trade__content-cards {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 4rem;
+      justify-items: center;
+      align-self: center;
+      z-index: 1;
+      @include breakpoint-down(large) {
+        grid-template-columns: repeat(3, 1fr);
+      }
+      @include breakpoint-down(medium) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      @include breakpoint-down(small) {
+        grid-template-columns: repeat(1, 1fr);
+      }
+      .trade___single-card {
+        background: #404040;
+        border-radius: 5px;
+        padding: 2rem;
+        text-align: center;
+        width: 100%;
+        img {
+          margin-block: 2rem;
+        }
+        h4 {
+          font-size: 16px;
+          font-family: "Open Sans", sans-serif;
+          font-weight: 400;
+          line-height: 25px;
+          color: #fff;
+          @include breakpoint-down(small) {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.steps {
+  background-color: #406c83;
+  &__wrapper {
+    padding: 10rem 15rem;
+    @media screen and (max-width: 1700px) {
+      padding: 10rem 5rem;
+    }
+    @include breakpoint-down(medium) {
+      padding: 10rem 3rem;
+    }
+    @include breakpoint-down(small) {
+      padding: 8rem 1rem;
+    }
+  }
+  &__heading {
+    font-family: "Ubuntu", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: auto;
+    margin-bottom: 10rem;
+    letter-spacing: 0.05em;
+    color: #fff;
+    text-align: center;
+    @include breakpoint-down(medium) {
+      font-size: 3.5rem;
+    }
+    @include breakpoint-down(small) {
+      font-size: 3rem;
+    }
+  }
+  &__contents {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 3rem;
+    @include breakpoint-down(large) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include breakpoint-down(small) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include breakpoint-down(large) {
+      margin-bottom: 5rem;
+    }
+    &-number {
+      position: relative;
+
+      background: linear-gradient(180deg, #406c83 0%, #85969f 74.24%);
+      padding: 1rem 2rem;
+      margin-bottom: 3rem;
+      h1 {
+        color: #fff;
+        font-size: 4rem;
+        font-weight: 400;
+      }
+    }
+    &-heading {
+      font-size: 3rem;
+      color: #fff;
+      text-transform: uppercase;
+      margin-bottom: 2rem;
+      font-family: "Ubuntu";
+      font-weight: 400;
+      font-size: 32px;
+      line-height: 37px;
+      text-align: center;
+      @include breakpoint-down(medium) {
+      }
+    }
+    &-text {
+      font-size: 16px;
+      line-height: 30px;
+      color: #fff;
+      text-align: center;
+    }
+  }
+}

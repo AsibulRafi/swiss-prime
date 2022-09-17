@@ -1,0 +1,210 @@
+.cfd {
+  background-color: #030f26;
+  padding: 10rem 20rem;
+  @media screen and (max-width: 1600px) {
+    padding: 10rem 5rem;
+  }
+  @include breakpoint-down(medium) {
+    padding: 10rem 4rem;
+  }
+  @include breakpoint-down(small) {
+    padding: 8rem 2rem;
+  }
+  &__content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    @include breakpoint-down(medium) {
+      flex-direction: column;
+      &:nth-child(2) {
+        flex-direction: column-reverse;
+      }
+    }
+    &:nth-child(2) {
+      .cfd__content-text {
+        margin-left: 10rem;
+        @include breakpoint-down(medium) {
+          margin-left: 0rem;
+          margin-bottom: 5rem;
+        }
+      }
+    }
+    &-text {
+      flex-basis: 50%;
+      margin-right: 10rem;
+      @include breakpoint-down(medium) {
+        margin-right: 0rem;
+        margin-bottom: 5rem;
+      }
+      p {
+        font-size: 18px;
+        line-height: 25px;
+        color: #e0e0e0;
+        margin-bottom: 1rem;
+        @include breakpoint-down(medium) {
+          font-size: 17px;
+        }
+        @include breakpoint-down(small) {
+          font-size: 15px;
+        }
+      }
+    }
+    &-img {
+      flex-basis: 50%;
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
+.forex {
+  padding: 8rem 20rem;
+  @media screen and (max-width: 1800px) {
+    padding: 8rem 5rem;
+  }
+  @include breakpoint-down(medium) {
+    padding: 8rem 4rem;
+  }
+  @include breakpoint-down(small) {
+    padding: 5rem 2rem;
+  }
+  &__heading {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 800px;
+    margin-bottom: 10rem;
+    @include breakpoint-down(medium) {
+      width: 100%;
+    }
+
+    h2 {
+      position: relative;
+      bottom: -2rem;
+      width: 375px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: #fff;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 40px;
+      line-height: 50px;
+      text-align: center;
+      letter-spacing: 0.05em;
+      color: #0c1d40;
+      @include breakpoint-down(medium) {
+        font-size: 36;
+      }
+      @include breakpoint-down(small) {
+        width: 100%;
+        font-size: 32px;
+      }
+    }
+    .line {
+      background: linear-gradient(
+        269.98deg,
+        rgba(0, 0, 0, 0) 0.01%,
+        #000000 14.53%,
+        #000000 37.56%,
+        #000000 68.53%,
+        rgba(0, 0, 0, 0.26) 82.59%,
+        rgba(0, 0, 0, 0.03) 99.99%
+      );
+    }
+  }
+  &__content {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    @include breakpoint-down(medium) {
+      flex-direction: column;
+    }
+    &-text {
+      flex-basis: 45%;
+      margin-right: 5rem;
+      @include breakpoint-down(medium) {
+        margin-right: 0rem;
+        margin-bottom: 5rem;
+      }
+      p {
+        font-size: 16px;
+        line-height: 25px;
+        color: #0c1d40;
+        margin-bottom: 1rem;
+        @include breakpoint-down(small) {
+          font-size: 15px;
+        }
+      }
+    }
+    &-img {
+      flex-basis: 50%;
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
+.signals {
+  padding: 8rem 20rem;
+  @media screen and (max-width: 1800px) {
+    padding: 8rem 5rem;
+  }
+  @include breakpoint-down(medium) {
+    padding: 8rem 4rem;
+  }
+  @include breakpoint-down(small) {
+    padding: 5rem 2rem;
+  }
+  &__content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    @include breakpoint-down(medium) {
+      flex-direction: column;
+    }
+    &-text {
+      flex-basis: 45%;
+      margin-right: 10rem;
+      @include breakpoint-down(medium) {
+        margin-right: 0rem;
+        margin-bottom: 5rem;
+        text-align: center;
+      }
+      p {
+        font-size: 30px;
+        line-height: 42px;
+        font-weight: 600;
+        color: #0c1d40;
+        margin-bottom: 5rem;
+        @include breakpoint-down(medium) {
+          font-size: 26px;
+        }
+        @include breakpoint-down(small) {
+          font-size: 24px;
+        }
+      }
+      button {
+        padding: 1.5rem 5rem;
+        background-color: #3f51b5;
+        font-size: 18px;
+        color: #fff;
+        text-transform: uppercase;
+        border: none;
+        outline: none;
+        @include breakpoint-down(small) {
+          padding: 1rem 3rem;
+        }
+      }
+    }
+    &-img {
+      flex-basis: 50%;
+      img {
+        @include breakpoint-down(medium) {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

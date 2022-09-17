@@ -1,0 +1,491 @@
+.accounts {
+  width: 100%;
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #262626;
+  &__wrapper {
+    position: relative;
+    z-index: 10;
+    padding: 10rem 15rem;
+    @media screen and (max-width: 1800px) {
+      padding: 10rem 5rem;
+    }
+    @include breakpoint-down(medium) {
+      padding: 10rem 4rem;
+    }
+    @include breakpoint-down(small) {
+      padding: 10rem 2rem;
+    }
+  }
+  &__heading {
+    margin-bottom: 10rem;
+    h2 {
+      text-align: center;
+      margin-bottom: 4rem;
+      font-size: 50px;
+      font-family: "Ubuntu", sans-serif;
+      font-weight: 400;
+      color: #fff;
+      @include breakpoint-down(medium) {
+        font-size: 40px;
+      }
+      @include breakpoint-down(small) {
+        font-size: 36px;
+      }
+    }
+    p {
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+      text-align: center;
+      font-size: 16px;
+      font-family: "Open Sans", sans-serif;
+      margin-bottom: 2rem;
+      color: #fff;
+      line-height: 30px;
+      width: 600px;
+      @include breakpoint-down(medium) {
+        font-size: 15px;
+      }
+      @include breakpoint-down(small) {
+        width: 100%;
+        line-height: 25px;
+        font-size: 14px;
+      }
+    }
+  }
+}
+.pricing {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: center;
+  @include breakpoint-down(medium) {
+    flex-direction: column;
+    align-items: center;
+  }
+  @include breakpoint-down(small) {
+    flex-direction: column;
+    align-items: center;
+  }
+  .pricingM {
+    margin-block: 0rem;
+  }
+  &__card {
+    filter: drop-shadow(0px 15px 50px rgba(50, 50, 93, 0.25));
+    &:not(:last-child) {
+      margin-right: 5rem;
+      @include breakpoint-down(medium) {
+        margin-right: 0rem;
+        margin-bottom: 5rem;
+      }
+    }
+
+    &-btn {
+      display: inline-block;
+      border: none;
+      padding: 2rem 6rem;
+      margin: 4rem 0rem;
+      font-size: 18px;
+      @include breakpoint-down(small) {
+        padding: 2rem 3rem;
+        font-size: 16px;
+      }
+    }
+    &-heading {
+      padding: 4rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      img {
+        margin-bottom: 2rem;
+      }
+      h2 {
+        text-transform: uppercase;
+        font-size: 4rem;
+        font-weight: 400;
+        @include breakpoint-down(small) {
+          font-size: 3rem;
+        }
+      }
+      p {
+        font-size: 17px;
+        @include breakpoint-down(small) {
+          font-size: 15px;
+        }
+      }
+      h3 {
+        font-size: 3.4rem;
+        font-weight: 400;
+        @include breakpoint-down(small) {
+          font-size: 3rem;
+        }
+      }
+    }
+    &-info {
+      padding: 0rem 2rem;
+      .info__box {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        text-align: left;
+        p {
+          font-size: 15px;
+          margin-block: 1rem;
+          @include breakpoint-down(small) {
+            font-size: 14px;
+          }
+        }
+        i {
+          margin-right: 1rem;
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}
+.accountSteps {
+  background-color: #406c83;
+  &__wrapper {
+    position: relative;
+    z-index: 10;
+    padding: 10rem 15rem;
+    @media screen and (max-width: 1800px) {
+      padding: 10rem 5rem;
+    }
+    @include breakpoint-down(medium) {
+      padding: 10rem 4rem;
+    }
+    @include breakpoint-down(small) {
+      padding: 10rem 2rem;
+    }
+  }
+  &__heading {
+    margin-bottom: 10rem;
+    h2 {
+      text-align: center;
+      margin-bottom: 4rem;
+      font-size: 45px;
+      font-family: "Ubuntu", sans-serif;
+      font-weight: 400;
+      color: #fff;
+      @include breakpoint-down(medium) {
+        font-size: 40px;
+      }
+      @include breakpoint-down(small) {
+        font-size: 36px;
+      }
+    }
+  }
+  &__content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10rem;
+    justify-items: flex-start;
+    @include breakpoint-down(medium) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+    &-box {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      justify-content: center;
+      margin-bottom: 5rem;
+      @include breakpoint-down(small) {
+        margin-bottom: 0rem;
+        flex-direction: column;
+        align-items: center;
+      }
+      img {
+        margin-right: 2rem;
+        @include breakpoint-down(small) {
+          margin-right: 0rem;
+          margin-bottom: 2rem;
+        }
+      }
+      &-info {
+        h2 {
+          font-size: 28px;
+          font-weight: 400;
+          line-height: 37px;
+          color: #fff;
+          margin-bottom: 2rem;
+
+          @include breakpoint-down(medium) {
+            font-size: 26px;
+          }
+          @include breakpoint-down(small) {
+            font-size: 22px;
+          }
+        }
+        p {
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 30px;
+          color: #fff;
+          @include breakpoint-down(medium) {
+            font-size: 15px;
+          }
+          @include breakpoint-down(small) {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+}
+.funding {
+  background-color: #262626;
+  &__wrapper {
+    position: relative;
+    z-index: 10;
+    padding: 10rem 15rem;
+    @media screen and (max-width: 1800px) {
+      padding: 10rem 5rem;
+    }
+    @include breakpoint-down(medium) {
+      padding: 10rem 4rem;
+    }
+    @include breakpoint-down(small) {
+      padding: 10rem 2rem;
+    }
+  }
+  &__heading {
+    margin-bottom: 10rem;
+    h2 {
+      text-align: center;
+      margin-bottom: 4rem;
+      font-size: 50px;
+      font-family: "Ubuntu", sans-serif;
+      font-weight: 400;
+      color: #fff;
+      @include breakpoint-down(medium) {
+        font-size: 40px;
+      }
+      @include breakpoint-down(small) {
+        font-size: 36px;
+      }
+    }
+    p {
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+      text-align: center;
+      font-size: 16px;
+      font-family: "Open Sans", sans-serif;
+      margin-bottom: 2rem;
+      color: #fff;
+      line-height: 30px;
+      width: 600px;
+      @include breakpoint-down(medium) {
+        font-size: 15px;
+      }
+      @include breakpoint-down(small) {
+        width: 100%;
+        line-height: 25px;
+        font-size: 14px;
+      }
+    }
+  }
+  &__content {
+    p {
+      font-size: 16px;
+      font-family: "Open Sans", sans-serif;
+      margin-bottom: 2rem;
+      color: #fff;
+      line-height: 30px;
+      @include breakpoint-down(medium) {
+        font-size: 15px;
+      }
+      @include breakpoint-down(small) {
+        line-height: 25px;
+        font-size: 14px;
+      }
+    }
+    h2 {
+      font-family: "Ubuntu", sans-serif;
+      font-size: 30px;
+      font-weight: 400;
+      color: #fff;
+      margin-bottom: 2rem;
+      @include breakpoint-down(medium) {
+        font-size: 26px;
+      }
+      @include breakpoint-down(small) {
+        font-size: 22px;
+      }
+    }
+    ul {
+      margin-left: 2rem;
+      li::marker {
+        font-size: 2rem;
+      }
+      li {
+        font-size: 16px;
+        font-family: "Open Sans", sans-serif;
+        margin-bottom: 1rem;
+        color: #fff;
+        line-height: 25px;
+
+        @include breakpoint-down(small) {
+          font-size: 15px;
+        }
+      }
+    }
+    &-flex {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 10rem;
+      @include breakpoint-down(medium) {
+        flex-direction: column;
+      }
+      @include breakpoint-down(small) {
+        margin-bottom: 5rem;
+      }
+
+      &-box {
+        flex-basis: 50%;
+        &:first-child {
+          margin-right: 10rem;
+          @include breakpoint-down(medium) {
+            margin-right: 0rem;
+            margin-bottom: 2rem;
+          }
+        }
+      }
+    }
+  }
+}
+.segregated {
+  &__wrapper {
+    position: relative;
+    z-index: 10;
+    padding: 10rem 15rem;
+    @media screen and (max-width: 1800px) {
+      padding: 10rem 5rem;
+    }
+    @include breakpoint-down(medium) {
+      padding: 10rem 4rem;
+    }
+    @include breakpoint-down(small) {
+      padding: 10rem 2rem;
+    }
+  }
+  &__heading {
+    margin-bottom: 10rem;
+    @include breakpoint-down(small) {
+      margin-bottom: 5rem;
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 4rem;
+      font-size: 50px;
+      font-family: "Ubuntu", sans-serif;
+      font-weight: 400;
+      color: #262626;
+      @include breakpoint-down(medium) {
+        font-size: 40px;
+      }
+      @include breakpoint-down(small) {
+        font-size: 36px;
+      }
+    }
+    p {
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+      text-align: center;
+      font-size: 16px;
+      font-family: "Open Sans", sans-serif;
+      margin-bottom: 2rem;
+      color: #262626;
+      line-height: 30px;
+      width: 600px;
+      @include breakpoint-down(medium) {
+        font-size: 15px;
+      }
+      @include breakpoint-down(small) {
+        width: 100%;
+        line-height: 25px;
+        font-size: 14px;
+      }
+    }
+  }
+  &__content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    @include breakpoint-down(medium) {
+      flex-direction: column;
+    }
+
+    &-item {
+      flex-basis: 50%;
+      &:first-child {
+        margin-right: 10rem;
+        @include breakpoint-down(medium) {
+          margin-right: 0rem;
+          margin-bottom: 2rem;
+        }
+      }
+      h2 {
+        font-family: "Ubuntu", sans-serif;
+        font-size: 30px;
+        font-weight: 400;
+        color: #262626;
+        margin-bottom: 2rem;
+        @include breakpoint-down(medium) {
+          font-size: 26px;
+        }
+        @include breakpoint-down(small) {
+          font-size: 22px;
+        }
+      }
+      img {
+        width: 100%;
+      }
+      ul {
+        margin-left: 2rem;
+        li::marker {
+          font-size: 2rem;
+        }
+        li {
+          font-size: 16px;
+          font-family: "Open Sans", sans-serif;
+          margin-bottom: 1rem;
+          color: #262626;
+          line-height: 25px;
+
+          @include breakpoint-down(small) {
+            font-size: 15px;
+          }
+        }
+      }
+      p {
+        font-size: 16px;
+        font-family: "Open Sans", sans-serif;
+        margin-bottom: 2rem;
+        color: #262626;
+        line-height: 30px;
+        @include breakpoint-down(medium) {
+          font-size: 15px;
+        }
+        @include breakpoint-down(small) {
+          line-height: 25px;
+          font-size: 14px;
+        }
+      }
+    }
+
+    &-flex {
+    }
+  }
+}
