@@ -156,24 +156,24 @@ const Navbar = () => {
             </li>
             {/* Another Nav */}
             <li>
-              <Link to="/trading" className="desktop-link">
+              <Link to="/tools" className="desktop-link">
                 TOOLS
               </Link>
               <input type="checkbox" id="show-tools" />
               <label htmlFor="show-tools">TOOLS</label>
               <ul>
                 <li>
-                  <Link to="/spreads" onClick={() => setChecked(false)}>
+                  <Link to="/tools" onClick={() => setChecked(false)}>
                     Spreads and Trading Hours
                   </Link>
                 </li>
                 <li>
-                  <Link to="/trading" onClick={() => setChecked(false)}>
+                  <Link to="/tools#glossary" onClick={() => setChecked(false)}>
                     Trading Glossary
                   </Link>
                 </li>
                 <li>
-                  <Link to="/signals" onClick={() => setChecked(false)}>
+                  <Link to="/tools#forex" onClick={() => setChecked(false)}>
                     Forex Signals
                   </Link>
                 </li>

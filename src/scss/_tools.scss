@@ -1,0 +1,392 @@
+.tools {
+  background-color: #262626;
+  &__wrapper {
+    padding: 10rem 15rem;
+    @media screen and (max-width: 1600px) {
+      padding: 10rem 4rem;
+    }
+    @include breakpoint-down(medium) {
+      padding: 8rem 3rem;
+    }
+    @include breakpoint-down(small) {
+      padding: 8rem 2rem;
+    }
+  }
+  &__heading {
+    margin-bottom: 10rem;
+    h2 {
+      text-align: center;
+      margin-bottom: 4rem;
+      font-size: 50px;
+      font-family: "Ubuntu", sans-serif;
+      font-weight: 400;
+      color: #fff;
+      @include breakpoint-down(medium) {
+        font-size: 40px;
+      }
+      @include breakpoint-down(small) {
+        font-size: 36px;
+      }
+    }
+    p {
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+      text-align: center;
+      font-size: 16px;
+      font-family: "Open Sans", sans-serif;
+      margin-bottom: 2rem;
+      color: #fff;
+      line-height: 30px;
+      width: 600px;
+      @include breakpoint-down(medium) {
+        font-size: 15px;
+      }
+      @include breakpoint-down(small) {
+        width: 100%;
+        line-height: 25px;
+        font-size: 14px;
+      }
+    }
+  }
+  &__content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    @include breakpoint-down(medium) {
+      flex-direction: column-reverse;
+      justify-content: center;
+      align-items: center;
+    }
+    &-info {
+      margin-left: 10rem;
+      flex-basis: 45%;
+      @media screen and (max-width: 1300px) {
+        margin-left: 5rem;
+      }
+      @include breakpoint-down(medium) {
+        margin-left: 0rem;
+        margin-bottom: 5rem;
+      }
+      h2 {
+        font-family: "Ubuntu", sans-serif;
+        font-size: 30px;
+        font-weight: 400;
+        color: #fff;
+        margin-bottom: 2rem;
+        @include breakpoint-down(medium) {
+          font-size: 26px;
+        }
+        @include breakpoint-down(small) {
+          font-size: 22px;
+        }
+      }
+      ul {
+        margin-left: 2rem;
+        li::marker {
+          font-size: 2rem;
+        }
+        li {
+          font-size: 16px;
+          font-family: "Open Sans", sans-serif;
+          margin-bottom: 1rem;
+          color: #fff;
+          line-height: 25px;
+
+          @include breakpoint-down(small) {
+            font-size: 15px;
+          }
+        }
+      }
+      p {
+        font-size: 16px;
+        font-weight: 400;
+        margin-bottom: 2rem;
+        line-height: 30px;
+        color: #fff;
+        @include breakpoint-down(small) {
+          font-size: 14px;
+        }
+      }
+    }
+    &-img {
+      flex-basis: 50%;
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
+.trading__letter {
+  background-color: #fff;
+  padding: 8rem 20rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  @media screen and (max-width: 1600px) {
+    padding: 8rem 3rem;
+  }
+  @include breakpoint-down(medium) {
+    padding: 8rem 2rem;
+  }
+  @include breakpoint-down(small) {
+    padding: 5rem 1rem;
+  }
+  .tg_text {
+    width: 76px;
+    height: 76px;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #262626;
+    border: 2px solid #262626;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    margin: 2rem;
+    cursor: pointer;
+  }
+  .tg__active {
+    width: 76px;
+    height: 76px;
+    font-family: "PT Serif", sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #fff;
+    background-color: #406c83;
+    border: 2px solid #406c83;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    margin: 2rem;
+    cursor: pointer;
+  }
+}
+.trading__text {
+  padding: 8rem 15rem;
+  @media screen and (max-width: 1600px) {
+    padding: 8rem 5rem;
+  }
+  @include breakpoint-down(medium) {
+    padding: 8rem 2rem;
+  }
+  @include breakpoint-down(small) {
+    padding: 5rem 1rem;
+  }
+  &-heading {
+    width: 100%;
+    text-align: center;
+    font-size: 5rem;
+    padding: 0rem 1rem;
+    line-height: 65px;
+    border: 2px solid #406c83;
+    color: #406c83;
+    text-transform: uppercase;
+    margin-bottom: 10rem;
+    @include breakpoint-down(medium) {
+      font-size: 4rem;
+    }
+    @include breakpoint-down(small) {
+      font-size: 3rem;
+    }
+  }
+  &-content {
+    &-single {
+      margin-bottom: 2rem;
+      &-flex {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-bottom: 2rem;
+        @include breakpoint-down(small) {
+          flex-direction: column;
+        }
+        h2 {
+          font-size: 2.5rem;
+          color: #262626;
+          flex-basis: 40%;
+          font-family: "Ubuntu", sans-serif;
+          font-weight: 400;
+          @include breakpoint-down(small) {
+            font-size: 2rem;
+            margin-bottom: 3rem;
+          }
+        }
+        p {
+          flex-basis: 60%;
+          font-size: 16px;
+          color: #262626;
+          @include breakpoint-down(small) {
+            font-size: 14px;
+          }
+        }
+      }
+      hr {
+        border: none;
+        border-top: 2px dashed #c4c4c4;
+      }
+    }
+  }
+}
+.forex {
+  background-color: #262626;
+  &__wrapper {
+    padding: 10rem 15rem;
+    @media screen and (max-width: 1600px) {
+      padding: 10rem 4rem;
+    }
+    @include breakpoint-down(medium) {
+      padding: 8rem 3rem;
+    }
+    @include breakpoint-down(small) {
+      padding: 8rem 2rem;
+    }
+  }
+  &__content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    @include breakpoint-down(medium) {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    &-info {
+      margin-right: 10rem;
+      flex-basis: 45%;
+      @media screen and (max-width: 1300px) {
+        margin-right: 5rem;
+      }
+      @include breakpoint-down(medium) {
+        margin-right: 0rem;
+        margin-bottom: 5rem;
+        text-align: center;
+      }
+      h2 {
+        margin-bottom: 2rem;
+        font-size: 38px;
+        font-family: "Ubuntu", sans-serif;
+        font-weight: 400;
+        color: #fff;
+        @include breakpoint-down(medium) {
+          font-size: 36px;
+        }
+        @include breakpoint-down(small) {
+          font-size: 30px;
+        }
+      }
+      p {
+        font-size: 16px;
+        font-weight: 400;
+        margin-bottom: 2rem;
+        line-height: 30px;
+        color: #fff;
+        @include breakpoint-down(medium) {
+          br {
+            display: none;
+          }
+        }
+        @include breakpoint-down(small) {
+          font-size: 14px;
+        }
+      }
+      a {
+        display: inline-block;
+        padding: 1.5rem 6rem;
+        font-size: 18px;
+        font-family: "Open Sans", sans-serif;
+        font-weight: 400;
+        text-transform: uppercase;
+        border: none;
+        background-color: #406c83;
+        color: #fff;
+        border: 2px solid #406c83;
+        &:hover {
+          background-color: transparent;
+          color: #fff;
+        }
+        @include breakpoint-down(small) {
+          padding: 1rem 3rem;
+          font-size: 16px;
+        }
+      }
+    }
+    &-img {
+      flex-basis: 50%;
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.accordion__section {
+  padding: 10rem 15rem;
+  @media screen and (max-width: 1600px) {
+    padding: 10rem 5rem;
+  }
+  @include breakpoint-down(medium) {
+    padding: 8rem 2rem;
+  }
+  @include breakpoint-down(small) {
+    padding: 5rem 1rem;
+  }
+  &-heading {
+    text-align: center;
+    margin-bottom: 5rem;
+    font-size: 50px;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 400;
+    color: #fff;
+    @include breakpoint-down(medium) {
+      font-size: 40px;
+    }
+    @include breakpoint-down(small) {
+      font-size: 36px;
+    }
+  }
+  .accordion__container {
+    background-color: #406c83;
+    .wrap {
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #26414f;
+      padding: 2rem;
+      h1 {
+        font-family: "Ubuntu", sans-serif;
+        font-size: 2.5rem;
+        font-weight: 400;
+        color: #fff;
+        @include breakpoint-down(medium) {
+          font-size: 2rem;
+        }
+        @include breakpoint-down(small) {
+          font-size: 1.6rem;
+          margin-right: 3rem;
+        }
+      }
+      span {
+        color: #fff;
+        font-size: 2rem;
+      }
+    }
+    .accordion__dropDown {
+      padding: 2rem;
+      p {
+        font-size: 1.8rem;
+        color: #fff;
+        margin-block: 5rem;
+        letter-spacing: 0.03em;
+        @include breakpoint-down(small) {
+          font-size: 1.4rem;
+        }
+      }
+    }
+  }
+}

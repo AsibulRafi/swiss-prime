@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import stepIcon1 from "../assets/stepsIcon1.png";
 import stepIcon2 from "../assets/stepsIcon2.png";
 import stepIcon3 from "../assets/stepsIcon3.png";
@@ -6,7 +6,63 @@ import segregatedImg from "../assets/segregatedImg.png";
 import mini from "../assets/mini.png";
 import classic from "../assets/classic.png";
 import premium from "../assets/premium.png";
+import { FiPlus, FiMinus } from "react-icons/fi";
 export default function Accounts() {
+  const [clicked, setClicked] = useState(false);
+  // FAQ
+  const toggle = (index) => {
+    if (clicked === index) {
+      return setClicked(null);
+    }
+
+    setClicked(index);
+  };
+  const render = (item) => {
+    return (
+      <div className="accordion__dropDown">
+        <p>{item?.answer}</p>
+      </div>
+    );
+  };
+  const Data = [
+    {
+      id: 1,
+      question: "How to open a Swiss Prime trade account trade account?",
+      answer:
+        "It is easy and secure to open a Swiss Prime account. Initially, you can choose to trade on a free demo account. However, if you're ready to trade, you can start trading on your Live Account. Based on how you would like to fund your account, there are three types of accounts available; once you begin trading there is always the option to upgrade from one account type to another.You will need to fill out a short registration form for any Live Account that you want to open. Legal documentation is required by regulation in order to provide proof of your identity. As soon as your identity has been confirmed, all you need to do is download the platform you want to trade on, make a deposit to fund your account, and then you're ready to start trading.",
+    },
+    {
+      id: 2,
+      question: "Which types of accounts are available??",
+      answer: `Three kinds of accounts are offered by Swiss Prime:
+
+        Mini Account - minimum deposit at $500 USD.
+    
+        Classic Account - minimum deposit at $5000 USD.
+        Premium Account - minimum deposit at $20000 USD. `,
+    },
+    {
+      id: 3,
+      question: "Which platform should you use?",
+      answer:
+        "There are a variety of different platforms available from Swiss Prime to meet the requirements of different traders with different circumstances. Swiss Prime MetaTrader 4 - Download this popular, world-renowned Forex desktop platform if you predominately trade in foreign currencies. It is both user-friendly and state-of-the-art.Swiss Prime Mobile - this solution provides apps for Android, tablets, and iPhone, enabling traders to trade from anywhere in the world, from a variety of devices.",
+    },
+    {
+      id: 4,
+      question:
+        "What type of information do you need to give in order to trade?",
+      answer: `You are requested to give the following information for proof of identity upon registration:Proof of ID. A copy of your Passport, National ID or Driver’s License
+      A copy of a utility bill or bank statement, not older than 3 monthsYou will need to clearly indicate the beneficiary name on the Swiss Prime- Client Agreement. It is important that the account beneficiary name corresponds to the name on the client agreement form, and also the documents for proof of identity. In addition, if you wish to withdraw funds, it must be to the same beneficiary.`,
+    },
+    {
+      id: 5,
+      question: "How do you manage your risk??",
+      answer: `The stop-loss order and the limit order are the most common risk management tools in Forex trading. A limit order sets a restriction on the minimum price to be received or the maximum price to be paid. 
+
+       An automatic liquidation at a predetermined price for a particular position is called a stop loss. This is used to limit potential losses if the market moves against an investor’s position.
+       `,
+    },
+  ];
   return (
     <>
       <section className="accounts" id="types">
@@ -368,6 +424,29 @@ export default function Accounts() {
                 activating and funding your account.
               </p>
               <img src={segregatedImg} alt="img" />
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className="accountsfaq">
+        <div className="accountsfaq__wrapper">
+          <div className="accordion__section">
+            <h2 className="accordion__section-heading">Account FAQ’s</h2>
+            <div className="accordion__container">
+              {Data.map((item) => {
+                return (
+                  <div key={item.id}>
+                    <div className="wrap" onClick={() => toggle(item?.id)}>
+                      <h1>{item?.question}</h1>
+                      <span>
+                        {clicked === item?.id ? <FiMinus /> : <FiPlus />}
+                      </span>
+                    </div>
+
+                    {clicked === item?.id ? render(item) : null}
+                  </div>
+                );
+              })}
             </div>
           </div>
         </div>

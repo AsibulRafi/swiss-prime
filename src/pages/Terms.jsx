@@ -133,7 +133,7 @@ export default function Terms() {
               put on the platform by a user through the process of using the
               platform. This means that all of the information which a user
               submits throughout his use of the website is considered to belong
-              to Swiss Prime . No Name 1 will reveal any information only if
+              to Swiss Prime . Swiss Prime will reveal any information only if
               there is an inquiry by a body of the law or if there is a mutual
               agreement with the requesting party. However, the abovementioned
               things do not mean that Swiss Prime does not have any relation or
@@ -417,8 +417,8 @@ export default function Terms() {
               The person contacting the user should be able to show an
               authorized signature in a written format. The user has the right
               to not accept the written notice, but it will only be valid if it
-              is allowed in written form by No Name 1 . The truthfulness of all
-              the information about the user`s personal details and is being
+              is allowed in written form by Swiss Prime . The truthfulness of
+              all the information about the user`s personal details and is being
               sent online is up to the user to verify and confirm by himself.
               Swiss Prime as to confirm or take action based on the provided
               information, in order for a mutual contract to be formed between
@@ -466,8 +466,8 @@ export default function Terms() {
               The person contacting the user should be able to show an
               authorized signature in a written format. The user has the right
               to not accept the written notice, but it will only be valid if it
-              is allowed in written form by No Name 1 . The truthfulness of all
-              the information about the user`s personal details and is being
+              is allowed in written form by Swiss Prime . The truthfulness of
+              all the information about the user`s personal details and is being
               sent online is up to the user to verify and confirm by himself.
               Swiss Prime as to confirm or take action based on the provided
               information, in order for a mutual contract to be formed between

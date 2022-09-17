@@ -116,20 +116,22 @@ export default function Tools() {
     <>
       <section className="tools">
         <div className="tools__wrapper">
-          <h2 className="tools__heading">Tools</h2>
-          <p>
-            Begginer or an expert, everyone needs tools to be the best!No Name1
-            provides you with some great recources which could benefit to your
-            trading career.
-          </p>
+          <div className="tools__heading">
+            <h2>Tools</h2>
+            <p>
+              Begginer or an expert, everyone needs tools to be the best!No
+              Name1 provides you with some great recources which could benefit
+              to your trading career.
+            </p>
+          </div>
           <div className="tools__content">
             <div className="tools__content-img">
               <img src={toolsBg} alt="toolsBg" />
             </div>
             <div className="tools__content-info">
               <h2>Spreads and Trading hours</h2>
-              <p>
-                Trading with Waysfx, you have access to a wide spectrum of
+              <p style={{ marginBottom: "10rem" }}>
+                Trading with Swiss Prime, you have access to a wide spectrum of
                  currency pairs, available 24/5. Free  of  strict  margin
                 boundaries,   item powers  you to  trade using  more  profitable
                 conditions.
@@ -149,20 +151,22 @@ export default function Tools() {
           </div>
         </div>
       </section>
-      <section className="trading__letter">
+      <section className="trading__letter" id="glossary">
         <LettersBlock />
       </section>
       <section className="trading">
         <Index letter={selectedLetter} />
       </section>
-      <section className="forex">
+      <section className="forex" id="forex">
         <div className="forex__wrapper">
           <div className="forex__content">
             <div className="forex__content-info">
               <h2>Forex Signals</h2>
               <p>
-                At No Name 1 we provide the best Forex signals by working
+                At Swiss Prime we provide the best Forex signals by working{" "}
+                <br />
                 closely with technology providers who are at the forefront of
+                <br />
                 the industry.
               </p>
               <a href="/">Open Account</a>
@@ -171,24 +175,27 @@ export default function Tools() {
               <img src={forexBg} alt="forexImg" />
             </div>
           </div>
+          <div className="accordion__section">
+            <h2 className="accordion__section-heading">FAQ's</h2>
+            <div className="accordion__container">
+              {Data.map((item) => {
+                return (
+                  <div key={item.id}>
+                    <div className="wrap" onClick={() => toggle(item?.id)}>
+                      <h1>{item?.question}</h1>
+                      <span>
+                        {clicked === item?.id ? <FiMinus /> : <FiPlus />}
+                      </span>
+                    </div>
+
+                    {clicked === item?.id ? render(item) : null}
+                  </div>
+                );
+              })}
+            </div>
+          </div>
         </div>
       </section>
-      <div className="accordion__section">
-        <div className="accordion__container">
-          {Data.map((item) => {
-            return (
-              <div key={item.id}>
-                <div className="wrap" onClick={() => toggle(item?.id)}>
-                  <h1>{item?.question}</h1>
-                  <span>{clicked === item?.id ? <FiMinus /> : <FiPlus />}</span>
-                </div>
-                <hr />
-                {clicked === item?.id ? render(item) : null}
-              </div>
-            );
-          })}
-        </div>
-      </div>
     </>
   );
 }
