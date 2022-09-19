@@ -16,6 +16,7 @@ import {
   Terms,
   Tools,
 } from "./pages";
+import Security from "./pages/Security";
 
 const App = () => {
   return (
@@ -34,6 +35,7 @@ const App = () => {
         <Route path="/terms" element={<Terms />} />
         <Route path="/laundering" element={<MoneyLaundering />} />
         <Route path="/risk" element={<Risk />} />
+        <Route path="/security" element={<Security />} />
       </Routes>
       <Footer />
     </BrowserRouter>

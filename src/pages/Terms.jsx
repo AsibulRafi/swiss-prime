@@ -1,6 +1,9 @@
-import React from "react";
+import React, { useEffect } from "react";
 import termsBg from "../assets/termsBg.png";
 export default function Terms() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <section className="docs">
       <div className="docs__heading">

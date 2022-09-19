@@ -1,10 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
 import metaTrader from "../assets/platformHerobg.png";
 import metaTraderBg from "../assets/platformImg1.png";
 import webTrader from "../assets/webTrader.png";
 import mobileTrader from "../assets/mobileTrader.png";
 import mobileTraderBg from "../assets/mobileTraderBg.png";
 export default function Platform() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
       <section className="platform">

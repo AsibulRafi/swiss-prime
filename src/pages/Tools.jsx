@@ -1,9 +1,12 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import toolsBg from "../assets/toolsBg.png";
 import Index from "../Components/Tools";
 import forexBg from "../assets/forexBg.png";
 import { FiPlus, FiMinus } from "react-icons/fi";
 export default function Tools() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const [selectedLetter, setSelectedLetter] = useState("a");
   const [clicked, setClicked] = useState(false);
   const alpabet = [

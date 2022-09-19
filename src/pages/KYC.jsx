@@ -1,6 +1,9 @@
-import React from "react";
+import React, { useEffect } from "react";
 import kycBg from "../assets/kycbg.png";
 export default function KYC() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <section className="docs">
       <div className="docs__heading">

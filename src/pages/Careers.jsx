@@ -1,6 +1,9 @@
-import React from "react";
+import React, { useEffect } from "react";
 import carrersBg from "../assets/careersBg.png";
 export default function Careers() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
       <section className="careers">

@@ -47,7 +47,7 @@ const Navbar = () => {
                   </Link>
                 </li>
                 <li>
-                  <Link to="/" onClick={() => setChecked(false)}>
+                  <Link to="/security" onClick={() => setChecked(false)}>
                     Security
                   </Link>
                 </li>

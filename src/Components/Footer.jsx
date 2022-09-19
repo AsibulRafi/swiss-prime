@@ -17,7 +17,7 @@ const Footer = () => {
                 <Link to="/about#about">About Us</Link>
                 <Link to="/about#contact">Contact Us</Link>
                 <Link to="/careers">Careers</Link>
-                <Link to="/">Security</Link>
+                <Link to="/security">Security</Link>
               </div>
               <div className="footer__content-links-single">
                 <h3>Accounts</h3>
