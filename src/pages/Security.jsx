@@ -14,7 +14,7 @@ export default function Security() {
           <div className="docs__content-flex-box">
             <h2>Security Policies</h2>
             <p>
-              In No Name 1, the security of funds and our client's information
+              In Swiss Prime, the security of funds and our client's information
               is our topmost priority. Our security team is continually
               improving our end-to-end security measures, bettering auditing
               processes, and reducing the ‘attack surface' of our

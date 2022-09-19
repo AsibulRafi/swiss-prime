@@ -23,10 +23,10 @@ export default function Assets() {
                 Stocks CFD trading helps you to enter the many major stock
                 markets from different countries avoiding large investments and
                 gains bigger advantages that trading just with assets by
-                themselves. Waysfx arranges also many other benefits for
+                themselves. Swiss Prime arranges also many other benefits for
                 traders, delivering them the premium terms for trade with no
                 charges for almost all trading services. Low spread and the
-                leverage will help you even maximize the profit.{" "}
+                leverage will help you even maximize the profit.
               </p>
               <p>
                 The absence of short sales bounds, stock lending, and borrowing
@@ -42,7 +42,7 @@ export default function Assets() {
                 on to the public. Investors can take a revenue of the huge
                 companies and gain a stock profit. Such giant companies, like
                 Google, Apple, Intel and so on are selling their shares online.
-                The forehand goal of No Name 1 is to make sure that all
+                The forehand goal of Swiss Prime is to make sure that all
                 customers have the best support for successful trading results.
                 Following that goal, we have developed for you this platform
                 which is supplemented with all possible trading features, tools
@@ -94,7 +94,8 @@ export default function Assets() {
               <p>
                 The Forex trading works without breaks, during the whole week
                 and 24 hours a day, but it has holidays on weekends. Look for
-                additional Forex information at the Waysfx learning section.
+                additional Forex information at the Swiss Prime learning
+                section.
               </p>
             </div>
             <div className="assets__content-img">
@@ -109,7 +110,7 @@ export default function Assets() {
             <div className="commodities__content-info">
               <h2>Commodities</h2>
               <p>
-                The biggest No name 1 priority is to make sure that a platform
+                The biggest Swiss Prime priority is to make sure that a platform
                 supplies to its precious customers the broadest feasible
                 selection of assets, and the commodities asset is not an
                 exclusion. Guiding you every single step of a trading process
@@ -117,7 +118,7 @@ export default function Assets() {
                 conditions during all the time are other important mis sions for
                 us.
               </p>
-              <h2>No name 1 allows you:</h2>
+              <h2>Swiss Prime allows you:</h2>
               <ul>
                 <li>Invest in precious metal, such as gold or silver</li>
                 <li>Make contractual agreements</li>
@@ -140,8 +141,8 @@ export default function Assets() {
                 <p>
                   Recently, there has been seeing such a big jump in the volume
                   of gold and trades with it. Gold is seen as a quite gainful
-                  commodity by a lot of investors. Waysfx provides you with the
-                  ability to invest in gold globally, from any point on the
+                  commodity by a lot of investors. Swiss Prime provides you with
+                  the ability to invest in gold globally, from any point on the
                   Earth, and you don’t have to make a large physical purchase of
                   big gold quantities. Gold has always been a chief economic
                   influence, and it will develop in the future as well. You
@@ -192,9 +193,9 @@ export default function Assets() {
                   due to countless political circumstances, unstable climate and
                   many innovations regarding its excavation and discovery. It is
                   usually recommended to make a large research and develop the
-                  strategy before investing in gas. In that case, Waysfx has
-                  every day non-stop service support for its users. A team of
-                  our dedicated professionals handles any inquiries or issues
+                  strategy before investing in gas. In that case, Swiss Prime
+                  has every day non-stop service support for its users. A team
+                  of our dedicated professionals handles any inquiries or issues
                   about trading this and other commodities.
                 </p>
               </div>
