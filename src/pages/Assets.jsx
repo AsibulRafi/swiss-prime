@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import assetImg1 from "../assets/assetsImg1.png";
 import assetImg2 from "../assets/assetsImg2.png";
 import commoditiesImg from "../assets/commoditiesImg.png";
@@ -8,6 +8,9 @@ import one from "../assets/algoIcon1.png";
 import two from "../assets/algoIcon2.png";
 import three from "../assets/algoIcon3.png";
 export default function Assets() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
       <section className="assets">
